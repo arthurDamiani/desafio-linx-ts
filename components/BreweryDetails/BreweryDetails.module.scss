@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.breweryDetailsContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    color: $color-primary;
+    border-radius: $border-radius-default;
+    border: 1px solid $color-border-primary;
+    box-shadow: 1px 1px 1px 1px $color-border-primary;
+
+    p {
+        margin: 0;
+    }
+}

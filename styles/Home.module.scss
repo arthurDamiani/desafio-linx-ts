@@ -1,0 +1,43 @@
+@import 'mixins';
+@import 'variables';
+
+.homeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breweryGrid {
+  width: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 19rem 19rem 19rem 18rem;
+
+  @include desktop() {
+    grid-template-columns: 19rem 19rem 18rem;
+  }
+  @include tablet() {
+    grid-template-columns: 19rem 18rem;
+  }
+  @include mobile() {
+    grid-template-columns: 18rem;
+  }
+}
+
+.paginationButtonsContainer {
+  display: flex;
+
+  button {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border-radius: $border-radius-default;
+    border: 1px solid $color-border-primary;
+  }
+}
+
+.buttonActive {
+  background-color: $color-primary;
+  color: $color-secondary
+}
