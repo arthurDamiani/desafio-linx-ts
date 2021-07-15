@@ -6,7 +6,6 @@ import Filter from '../components/Filter'
 import BreweryItem, {BreweryItemProps} from '../components/BreweryItem'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.scss'
-import { ChangeEvent } from 'react'
 
 export default function Home() {
   const [breweries, setBreweries] = useState([])

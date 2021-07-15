@@ -1,15 +1,13 @@
+import { ButtonHTMLAttributes } from 'react'
+import { DetailedHTMLProps } from 'react'
 import {IoChevronBack} from 'react-icons/io5'
 import styles from './BackButton.module.scss'
 
-interface BackButtonProps {
-    onClick: () => any
-}
-
-export default function BackButton({onClick}: BackButtonProps) {
+export default function BackButton({...props}: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) {
     return (
-        <div className={styles.backButtonContainer} onClick={onClick}>
+        <button className={styles.backButtonContainer} onClick={props.onClick}>
             <IoChevronBack />
             <p>Back</p>
-        </div>
+        </button>
     )
 }

@@ -1,13 +1,9 @@
 import { ChangeEventHandler } from 'react'
-import { ChangeEvent } from 'react'
+import { SelectHTMLAttributes } from 'react'
+import { DetailedHTMLProps } from 'react'
 import styles from './Filter.module.scss'
 
-interface FilterProps {
-    value: string
-    onChange: ChangeEventHandler<HTMLSelectElement>
-}
-
-export default function Filter({value, onChange}: FilterProps) {
+export default function Filter({value, onChange}: DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>) {
     return (
         <div className={styles.filterContainer}>
             <p>Filter:</p>
