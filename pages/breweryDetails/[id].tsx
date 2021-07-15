@@ -12,26 +12,6 @@ export default function BreweriesDetails() {
     const {id} = router.query
     const [breweriesDetails, setBreweriesDetails] = useState<BreweryItemProps>({})
 
-    function render(brewery: BreweryItemProps) {
-        return (
-            <BreweryDetails
-                key={brewery.id}
-                id={brewery.id}
-                name={brewery.name}
-                brewery_type={brewery.brewery_type}
-                street={brewery.street}
-                city={brewery.city}
-                state={brewery.state}
-                postal_code={brewery.postal_code}
-                country={brewery.country}
-                website_url={brewery.website_url}
-                phone={brewery.phone}
-                latitude={brewery.latitude}
-                longitude={brewery.longitude}
-            />
-        )
-    }
-
     useEffect(() => {
         const getBrewery = async () => {
             await api.get(`breweries/${id}`)

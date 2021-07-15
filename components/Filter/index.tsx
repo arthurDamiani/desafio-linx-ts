@@ -3,11 +3,11 @@ import { SelectHTMLAttributes } from 'react'
 import { DetailedHTMLProps } from 'react'
 import styles from './Filter.module.scss'
 
-export default function Filter({value, onChange}: DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>) {
+export default function Filter({...props}: DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>) {
     return (
         <div className={styles.filterContainer}>
             <p>Filter:</p>
-            <select className={styles.select} value={value} onChange={onChange}>
+            <select className={styles.select} {...props}>
                 <option value=''>default</option>
                 <option value='micro'>micro</option>
                 <option value='nano'>nano</option>

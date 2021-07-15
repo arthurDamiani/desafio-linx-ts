@@ -5,7 +5,7 @@ import styles from './BackButton.module.scss'
 
 export default function BackButton({...props}: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) {
     return (
-        <button className={styles.backButtonContainer} onClick={props.onClick}>
+        <button className={styles.backButtonContainer} {...props}>
             <IoChevronBack />
             <p>Back</p>
         </button>

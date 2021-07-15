@@ -6,19 +6,14 @@ export interface BreweryItemProps {
     name?: string
     brewery_type?: string
     street?: string
-    address_2?: null
-    address_3?: null
     city?: string
     state?: string
-    county_province?: null
     postal_code?: string
     country?: string
     longitude?: string
     latitude?: string
     phone?: string
     website_url?: string
-    updated_at?: string
-    created_at?: string
 }
 
 export default function BreweryItem({id, name, street, city, state, country, postal_code, brewery_type}: BreweryItemProps) {
